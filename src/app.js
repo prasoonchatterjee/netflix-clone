@@ -1,5 +1,6 @@
 import React from 'react'
-import FooterContainer from './containers/footer';
+import { FaqsContainer } from './containers/faqs';
+import {FooterContainer} from './containers/footer';
 import { JumbotronContainer } from './containers/jumbotron';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
     <JumbotronContainer/>
     <FooterContainer/>
+    <FaqsContainer/>
     </>
     );
 }
