@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders the basic <Header /> with a background 1`] = `
+<div
+  class="header__Background-t8lkk2-0 bgZrvE"
+  data-testid="header-bg"
+>
+  <div
+    class="header__Container-t8lkk2-1 qyoxh"
+  >
+    <p
+      class="header__Link-t8lkk2-7 jdvZWo"
+    >
+      Hello I am a link!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Header /> renders the basic <Header /> without a background 1`] = `
+<div
+  class="header__Container-t8lkk2-1 qyoxh"
+>
+  <p
+    class="header__Link-t8lkk2-7 hWCwEc"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
+exports[`<Header /> renders the full <Header> with a background 1`] = `
+<div
+  class="header__Background-t8lkk2-0 kSRzfe"
+  data-testid="header-bg"
+  src="joker1"
+>
+  <div
+    class="header__Container-t8lkk2-1 qyoxh"
+  >
+    <div
+      class="header__Group-t8lkk2-8 dHtVlC"
+    >
+      <p
+        class="header__Link-t8lkk2-7 hWCwEc"
+      >
+        Series
+      </p>
+      <p
+        class="header__Link-t8lkk2-7 hWCwEc"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="header__Group-t8lkk2-8 dHtVlC"
+    >
+      <div
+        class="header__Search-t8lkk2-12 irxvXa"
+      >
+        <button
+          class="header__SearchIcon-t8lkk2-13 bEWglN"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-t8lkk2-14 cxMZEe"
+          data-testid="search-input"
+          value="Joker"
+        />
+      </div>
+      <div
+        class="header__Profile-t8lkk2-11 kPyZbs"
+      >
+        <button
+          class="header__Picture-t8lkk2-9 fWKkdr"
+          src="/images/users//images/Prasoon.png.png"
+        />
+        <div
+          class="header__Dropdown-t8lkk2-10 NwTej"
+        >
+          <div
+            class="header__Group-t8lkk2-8 dHtVlC"
+          >
+            <button
+              class="header__Picture-t8lkk2-9 fWKkdr"
+              src="/images/users//images/Prasoon.png.png"
+            />
+            <p
+              class="header__Link-t8lkk2-7 hWCwEc"
+            >
+              Prasoon
+            </p>
+          </div>
+          <div
+            class="header__Group-t8lkk2-8 dHtVlC"
+          >
+            <p
+              class="header__Link-t8lkk2-7 hWCwEc"
+            >
+              Sign out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-t8lkk2-1 header__Feature-t8lkk2-4 qyoxh cYoXOR"
+  >
+    <h2
+      class="header__FeatureCallOut-t8lkk2-6 fKaLeF"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="header__Text-t8lkk2-5 hJGjur"
+    >
+      Forever alone in a crowd...
+    </p>
+    <button
+      class="header__PlayButton-t8lkk2-15 bJhFku"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;

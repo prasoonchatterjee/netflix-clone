@@ -1,13 +1,11 @@
 import React from "react";
-import {
-  JumbotronContainer,
-  FooterContainer,
-  FaqsContainer,
-  HeaderContainer,
-} from "../containers";
+import { Feature, OptForm } from "../components";
+import { HeaderContainer } from "../containers/header";
+import { JumbotronContainer } from "../containers/jumbotron";
+import { FaqsContainer } from "../containers/faqs";
+import { FooterContainer } from "../containers/footer";
 
-import { OptForm, Feature } from "../components";
-function home() {
+export default function Home() {
   return (
     <>
       <HeaderContainer>
@@ -19,21 +17,20 @@ function home() {
             Watch anywhere. Cancel at any time.
           </Feature.SubTitle>
           <OptForm>
-            <OptForm.Input placeholder="Email Address" />
+            <OptForm.Input placeholder="Email address" />
             <OptForm.Button>Try it now</OptForm.Button>
             <OptForm.Break />
             <OptForm.Text>
               Ready to watch? Enter your email to create or restart your
-              membership
+              membership.
             </OptForm.Text>
           </OptForm>
         </Feature>
       </HeaderContainer>
+
       <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />
     </>
   );
 }
-
-export default home;

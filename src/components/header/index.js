@@ -21,7 +21,13 @@ import {
 } from "./styles/header";
 
 export default function Header({ bg = true, children, ...restProps }) {
-  return bg ? <Background {...restProps}>{children}</Background> : children;
+  return bg ? (
+    <Background {...restProps} data-testid="header-bg">
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 }
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
@@ -86,6 +92,7 @@ Header.Search = function HeaderSearch({
     <Search {...restProps}>
       <SearchIcon
         onClick={() => setSearchActive((searchActive) => !searchActive)}
+        data-testid="search-click"
       >
         <img src="/images/icons/search.png" alt="Search" />
       </SearchIcon>
@@ -94,6 +101,7 @@ Header.Search = function HeaderSearch({
         onChange={({ target }) => setSearchTerm(target.value)}
         plcaeholder="Search Movies and Series"
         active={searchActive}
+        data-testid="search-input"
       />
     </Search>
   );

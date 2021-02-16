@@ -10,7 +10,7 @@
     "fuse.js": "^6.4.6",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
@@ -57,7 +57,7 @@
       "!<rootDir>/src/hooks/*.js",
       "!<rootDir>/src/context/*.js"
     ],
-     "coverageThreshold": {
+    "coverageThreshold": {
       "global": {
         "branches": 90,
         "functions": 90,
@@ -65,7 +65,7 @@
         "statements": 90
       }
     },
-     "coverageReporters": [
+    "coverageReporters": [
       "html",
       "text"
     ]
