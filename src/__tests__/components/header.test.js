@@ -41,7 +41,7 @@ describe("<Header />", () => {
       <Header src="joker1" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
-            {/* <Header.Logo src="/images/logo.svg" alt="Netflix" /> */}
+            <Header.Logo src="/logo.svg" alt="Netflix" />
             <Header.TextLink active={false} onClick={() => {}}>
               Series
             </Header.TextLink>

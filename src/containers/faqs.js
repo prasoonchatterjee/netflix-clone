@@ -1,7 +1,9 @@
 import React from "react";
-import { Accordion, OptForm } from "../components";
+import { OptFormContainer } from "../containers";
+import { Accordion } from "../components";
 import faqsData from "../fixtures/faqs.json";
 
+/* it contains all the FAQs within the accordion and the opt in form in the homepage */
 export default function FaqsContainer() {
   return (
     <Accordion>
@@ -12,14 +14,7 @@ export default function FaqsContainer() {
           <Accordion.Body>{item.body}</Accordion.Body>
         </Accordion.Item>
       ))}
-      <OptForm>
-        <OptForm.Input placeholder="Email Address" />
-        <OptForm.Button>Try it now</OptForm.Button>
-        <OptForm.Break />
-        <OptForm.Text>
-          Ready to watch? Enter your email to create or restart your membership
-        </OptForm.Text>
-      </OptForm>
+      <OptFormContainer />
     </Accordion>
   );
 }

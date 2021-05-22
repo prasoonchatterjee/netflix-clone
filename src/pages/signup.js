@@ -16,6 +16,7 @@ function Signup() {
 
   const isInValid = firstName === "" || password === "" || emailAddress === "";
 
+  /* create a new user with email & password and then update its displayName and photoURL and then redirect to browse page on success or empty the form and show the error in failure */
   function handleSignUp(event) {
     event.preventDefault();
 
@@ -44,7 +45,7 @@ function Signup() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign Up</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignUp} method="POST">
             <Form.Input
@@ -64,7 +65,11 @@ function Signup() {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInValid} type="submit">
+            <Form.Submit
+              disabled={isInValid}
+              type="submit"
+              data-testid="sign-up"
+            >
               Sign Up
             </Form.Submit>
             <Form.Text>

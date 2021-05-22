@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+
+/* retrives collection of movies or series from firebase firestore based on target passed which is either series or films to access their individual collection */
 import { useEffect, useContext, useState } from "react";
 import { FirebaseContext } from "../context/firebase";
 
@@ -22,6 +24,5 @@ export default function useContent(target) {
         console.log(error);
       });
   }, []);
-
   return { [target]: content };
 }

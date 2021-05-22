@@ -33,7 +33,6 @@ export default function Card({ children, ...restProps }) {
 }
 
 Card.Group = function CardGroup({ children, ...restProps }) {
-  console.log(useContext(FeatureContext));
   return <Group {...restProps}>{children}</Group>;
 };
 

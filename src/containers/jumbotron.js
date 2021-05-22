@@ -2,6 +2,7 @@ import React from "react";
 import jumboData from "../fixtures/jumbo.json";
 import { Jumbotron } from "../components/";
 
+/* this builds the three jumbo on top of each other in the homepage below the header with opt form */
 export default function JumbotronContainer() {
   return (
     <Jumbotron.Container>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer } from "../components";
 
+/* this builds the entire footer which we see in the bottom of every page*/
 export default function FooterContainer() {
   return (
     <Footer>

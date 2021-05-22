@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
+//if user present then redirect to loggedInPath
 export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   return (
     <Route
@@ -14,6 +15,7 @@ export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   );
 }
 
+//if user not present redirect to signInPath
 export function ProtectedRoute({ children, user, signInPath, ...rest }) {
   return (
     <Route

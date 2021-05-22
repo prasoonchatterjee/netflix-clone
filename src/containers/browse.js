@@ -1,27 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
-import { FooterContainer, SelectProfileContainer } from "../containers";
+import { FooterContainer } from "../containers";
 import { FirebaseContext } from "../context/firebase";
-import { Header, Loading, Card, Player } from "../components";
+import { Header, Card, Player } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
-export default function BrowseContainer({ slides }) {
-  const [profile, setProfile] = useState({});
+export default function BrowseContainer({ slides, user }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("series");
   const [slideRows, setSlideRows] = useState([]);
 
   const { firebase } = useContext(FirebaseContext);
-  const user = firebase.auth().currentUser || {};
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, [profile.displayName]);
 
   useEffect(() => {
     setSlideRows(slides[category]);
@@ -40,10 +32,10 @@ export default function BrowseContainer({ slides }) {
       setSlideRows(slides[category]);
     }
   }, [searchTerm]);
-  return profile.displayName ? (
-    <>
-      {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
+  return (
+    <>
+      {/* top of the heaader ie navigation bar */}
       <Header src="joker1" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
@@ -82,6 +74,8 @@ export default function BrowseContainer({ slides }) {
             </Header.Profile>
           </Header.Group>
         </Header.Frame>
+
+        {/* main jumbotron of joker movie */}
         <Header.Feature>
           <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
           <Header.Text>
@@ -95,6 +89,7 @@ export default function BrowseContainer({ slides }) {
         </Header.Feature>
       </Header>
 
+      {/* all the cards of movies or series depending on whats selected */}
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
@@ -123,7 +118,5 @@ export default function BrowseContainer({ slides }) {
       </Card.Group>
       <FooterContainer />
     </>
-  ) : (
-    <SelectProfileContainer user={user} setProfile={setProfile} />
   );
 }

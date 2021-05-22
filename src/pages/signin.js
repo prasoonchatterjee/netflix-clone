@@ -15,6 +15,7 @@ function Signin() {
 
   const isInValid = password === "" || emailAddress === "";
 
+  /* sign in with email & password & redirect to browse page on success and on failure empty the form and display the error message */
   const handleSignIn = (event) => {
     event.preventDefault();
 
@@ -35,7 +36,7 @@ function Signin() {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
           <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
@@ -50,7 +51,11 @@ function Signin() {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInValid} type="submit">
+            <Form.Submit
+              disabled={isInValid}
+              type="submit"
+              data-testid="sign-in"
+            >
               Sign In
             </Form.Submit>
           </Form.Base>
